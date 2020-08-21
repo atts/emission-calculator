@@ -1,0 +1,18 @@
+{
+  "name": "emission-calculator",
+  "version": "1.0.0",
+  "description": "this library calculates the CO2 emission of the vehicles",
+  "main": "index.js", 
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "calculate": "./index.js"
+  },
+  "author": "atulmishra",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^8.1.1",
+    "yargs": "^15.4.1"
+  }
+}

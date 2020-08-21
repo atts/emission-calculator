@@ -1,13 +1,12 @@
 const _emissionConfig = require('../constants/emission.constant')
 
-const _calculateEmission = (distance, mode, unit, output) => {
-
-    const co2_quantity_gms = _emissionConfig.EMISSION_NORMS[mode]
-    const total_kms = (unit == 'km') ? distance : distance / 1000
+const _calculateEmission = (params) => {
+    const co2_quantity_gms = _emissionConfig.EMISSION_NORMS[params.mode]
+    const total_kms = (params.unit == 'km') ? params.distance : params.distance / 1000
     let total_co2_gms = co2_quantity_gms * total_kms
     let total_co2_kg = total_co2_gms / 1000
 
-    switch (output) {
+    switch (params.output) {
         case 'kg':
             return { unit: 'kg', value: total_co2_kg.toFixed(1) }
             break

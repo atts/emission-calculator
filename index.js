@@ -11,14 +11,17 @@ const _options = _yargs
     .alias('help', 'h')
     .argv;
 
-const _distance = _options.distance
-const _mode = _options.mode
-const _unit = _options.unit.toLowerCase()
-const _output = _options.output ? _options.output.toLowerCase() : null
+ const params = {
+    distance : _options.distance,
+    mode : _options.mode,
+    unit : _options.unit.toLowerCase(),
+    output : _options.output ? _options.output.toLowerCase() : null
+ }
+
 const _calculate = require('./controllers/calculate')
 const _print = require('./templates/view.template')
 
-const data = _calculate.calculateEmission(_distance,_mode,_unit,_output)
+const data = _calculate.calculateEmission(params)
 
 _print.print(data)
 

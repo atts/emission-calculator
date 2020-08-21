@@ -14,7 +14,7 @@ CO2 Emission Calculator is a CLI application built in Node.js.
 4. Navigate to the folder where contents extracted 
     > cd emission-calculator
 
-5. To Install other dependencies :
+5. To Install local dependencies :
     > npm install
 
 6. To Install this co2emission CLI app globally on the machine, use command :
